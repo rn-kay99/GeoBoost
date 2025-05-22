@@ -148,7 +148,14 @@ async function fetchLatestBlogPost() {
     }
 }
 
-
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const bg = document.getElementById('hero-bg');
+    if (bg) {
+        bg.style.transform = `scale(${1 + scrollY / 3000})`;
+        bg.style.transition = 'transform 0.1s ease-out';
+    }
+});
 
 // Initialisierung
 document.addEventListener('DOMContentLoaded', async () => {
@@ -159,6 +166,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupForm();
     setupFAQ();
     initLanguageSystem();
+
+    if ('loading' in HTMLImageElement.prototype === false) {
+            const script = document.createElement('script');
+            script.src = 'https://polyfill.io/v3/polyfill.min.js?features=loadingLazy';
+            document.head.appendChild(script);
+        }
 });
 
 
