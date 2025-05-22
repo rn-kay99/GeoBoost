@@ -112,42 +112,6 @@ function setupFAQ() {
 }
 
 // Blog
-// Funktion zum Anzeigen des neuesten Blogposts
-function displayLatestBlogPost() {
-    if (blogPosts.length === 0) return;
-
-    const latestPost = blogPosts[0]; // Neuester Post ist der erste im Array
-
-    document.getElementById('latest-blog-title').textContent = latestPost.title;
-    document.getElementById('latest-blog-excerpt').textContent = latestPost.excerpt;
-    document.getElementById('latest-blog-date').textContent = latestPost.date;
-    document.getElementById('latest-blog-link').href = latestPost.link;
-
-    // Bild nur aktualisieren wenn vorhanden
-    const blogImage = document.getElementById('latest-blog-image');
-    if (blogImage && latestPost.image) {
-        blogImage.src = latestPost.image;
-        blogImage.alt = latestPost.title;
-    }
-}
-
-
-// Beispiel für API-Aufruf (optional)
-async function fetchLatestBlogPost() {
-    try {
-        const response = await fetch('https://api.example.com/blog/latest');
-        const data = await response.json();
-
-        if (data && data.length > 0) {
-            // Daten aktualisieren
-            blogPosts.unshift(data[0]); // Neuesten Post an den Anfang des Arrays setzen
-            displayLatestBlogPost();
-        }
-    } catch (error) {
-        console.error('Fehler beim Laden der Blogposts:', error);
-    }
-}
-
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const bg = document.getElementById('hero-bg');

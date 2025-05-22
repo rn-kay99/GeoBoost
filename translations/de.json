@@ -55,5 +55,10 @@
     "blog_teaser_subtitle": "Die neuesten Updates und Einblicke zu GeoBoost",
     "blog_subtitle": "Neueste Einblicke, Updates und technische Deep Dives zu unserer revolutionären Geodaten-Technologie",
     "blog-archive-link": "Alle Blogposts anzeigen",
+    "blog_sortby": "Sortieren nach:",
+    "blog_sortby_newest": "Neueste zuerst",
+    "blog_sortby_oldest": "Älteste zuerst",
+    "blog_sortby_title": "Titel A-Z",
+    "blog_sortby_category": "Kategorie",
     "read_more_link": "Weiterlesen →"
 }

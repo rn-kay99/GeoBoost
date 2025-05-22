@@ -136,6 +136,22 @@
     color: var(--secondary);
 }
 
+.back-to-blog-link {
+    display: inline-block;
+    font-size: 0.95rem;
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.back-to-blog-link:hover {
+    color: var(--primary);
+    transform: translateX(-3px);
+}
+
 @media (max-width: 768px) {
     .blog-header{
         padding: 30px 20px 10px 20px;

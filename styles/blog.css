@@ -184,6 +184,29 @@
     color: var(--secondary);
 }
 
+.blog-card-title-link{
+    color: var(--light);
+    text-decoration: none;
+}
+
+.blog-sort {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 10px;
+    align-items: center;
+    color: var(--light);
+}
+
+.blog-sort select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--light);
+    font-size: 0.95rem;
+}
+
 @media (max-width: 768px) {
     .blog-grid {
         grid-template-columns: 1fr;
@@ -197,3 +220,4 @@
         height: 180px;
     }
 }
+

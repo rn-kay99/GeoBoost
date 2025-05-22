@@ -11,20 +11,21 @@
         },
         "date": {
             "de": "22. Mai 2025",
-            "en": "22. May 2025"
+            "en": "22. May 2025",
+            "date_iso": "2025-05-22"
         },
         "image": "images/blog_beta_image.png",
         "category": {
-            "de": "TECHNOLOGIE",
-            "en": "TECHNOLOGY"
+            "de": "UPDATE",
+            "en": "UPDATE"
         },
         "link": "blog/tech-preview.html"
     },
     {
         "id": 2,
         "title": {
-            "de": "Warum Geodaten die Zukunft der KI sind",
-            "en": "Why Geodata is the Future of AI"
+            "de": "Was ist GEO? Der geheime Code für KI-Sichtbarkeit",
+            "en": "What is GEO? The secret code for AI visibility"
         },
         "excerpt": {
             "de": "Wie GeoBoost die Art und Weise verändert, wie KI-Systeme mit räumlichen Daten umgehen.",
@@ -32,13 +33,14 @@
         },
         "date": {
             "de": "25. Mai 2025",
-            "en": "25. May 2025"
+            "en": "25. May 2025",
+            "date_iso": "2025-05-25"
         },
-        "image": "images/blog_default_image.png",
+        "image": "images/why_geo_mood.png",
         "category": {
             "de": "TECHNOLOGIE",
             "en": "TECHNOLOGY"
         },
-        "link": "blog/ai-future.html"
+        "link": "blog/why_geo_blog.html"
     }
 ]
