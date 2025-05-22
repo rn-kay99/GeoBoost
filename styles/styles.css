@@ -59,14 +59,38 @@ header {
 .contact-link {
     color: var(--light);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 12px;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    font-size: 0.95rem;
+    display: inline-block;
+    min-height: 44px; /* Für mobile Tap-Ziele empfohlen */
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
-.contact-link:hover {
+.contact-link::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 12px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--secondary);
+    transition: width 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    background-color: rgba(255, 255, 255, 0.05);
     color: var(--secondary);
-    transform: translateY(-2px);
+}
+
+.contact-link:hover::after,
+.contact-link:focus::after {
+    width: calc(100% - 24px); /* Gleicher Abstand wie Padding */
 }
 
 .language-switcher {
@@ -116,6 +140,10 @@ header {
     height: 32px;
     /* Passe ggf. die Höhe an */
     width: auto;
+}
+
+.branding_name{
+    text-decoration: none;
 }
 
 /* Hero Section */
