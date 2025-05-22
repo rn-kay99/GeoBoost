@@ -33,38 +33,52 @@ function setupScrollIndicator() {
 
 // Form Submission
 function setupForm() {
-    const form = document.getElementById('notify-form');
-    const emailInput = document.getElementById('beta-email');
-    const messageDiv = document.getElementById('form-message');
-    const submitBtn = document.getElementById('notify-button');
+    const form = document.querySelector('form[name="notify"]');
+  const emailInput = document.getElementById('beta-email');
+  const messageDiv = document.getElementById('form-message');
+  const submitButton = document.getElementById('notify-button');
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Verhindert sofortiges Absenden
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-        const email = emailInput.value.trim();
-        messageDiv.style.display = 'none';
-        emailInput.classList.remove('error');
+    const email = emailInput.value.trim();
+    messageDiv.style.display = 'none';
+    emailInput.classList.remove('error');
 
-        // Clientseitige Prüfung
-        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            emailInput.classList.add('error');
-            showMessage('Bitte gib eine gültige E-Mail-Adresse ein', 'error');
-            return;
-        }
-
-        // Erfolgreiche Validierung: Button deaktivieren & Text ändern
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Wird gesendet...';
-
-        // Formular normal absenden (Netlify verarbeitet es)
-        form.submit();
-    });
-
-    function showMessage(text, type) {
-        messageDiv.textContent = text;
-        messageDiv.style.color = type === 'success' ? '#88d3ce' : '#ff6b6b';
-        messageDiv.style.display = 'block';
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      emailInput.classList.add('error');
+      showMessage('Bitte gib eine gültige E-Mail-Adresse ein', 'error');
+      return;
     }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Wird gesendet...';
+
+    const formData = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(() => {
+        showMessage('Erfolgreich angemeldet! Du erhältst bald weitere Infos.', 'success');
+        emailInput.value = '';
+      })
+      .catch(() => {
+        showMessage('Netzwerkfehler – bitte versuche es später erneut', 'error');
+      })
+      .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Benachrichtigen';
+      });
+  });
+
+  function showMessage(text, type) {
+    messageDiv.textContent = text;
+    messageDiv.style.color = type === 'success' ? '#88d3ce' : '#ff6b6b';
+    messageDiv.style.display = 'block';
+  }
 }
 
 // FAQ Accordion
