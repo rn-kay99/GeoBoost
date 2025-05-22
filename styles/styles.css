@@ -1090,10 +1090,15 @@ footer {
 }
 
 /* beta badge */
-.live-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.title-with-badge {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.live-badge-inline {
     background: var(--accent);
     color: white;
     font-weight: bold;
@@ -1101,6 +1106,7 @@ footer {
     border-radius: 20px;
     font-size: 0.75rem;
     animation: pulse-badge 2s infinite;
+    line-height: 1;
 }
 
 @keyframes pulse-badge {
