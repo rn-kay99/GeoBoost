@@ -56,34 +56,43 @@
 
                         <div class="product-content">
                             <div class="countdown-overlay">
-                                <div class="countdown">
-                                    <div class="countdown-item">
-                                        <div class="countdown-number" id="days">00</div>
-                                        <div class="countdown-label" data-translate="countdown_days">Tage</div>
-                                    </div>
-                                    <div class="countdown-item">
-                                        <div class="countdown-number" id="hours">00</div>
-                                        <div class="countdown-label" data-translate="countdown_hours">Stunden</div>
-                                    </div>
-                                    <div class="countdown-item">
-                                        <div class="countdown-number" id="minutes">00</div>
-                                        <div class="countdown-label" data-translate="countdown_minutes">Minuten</div>
-                                    </div>
-                                    <div class="countdown-item">
-                                        <div class="countdown-number" id="seconds">00</div>
-                                        <div class="countdown-label" data-translate="countdown_seconds">Sekunden</div>
+                                <div class="countdown-container">
+                                    <div class="countdown-title">Beta in</div>
+                                    <div class="countdown">
+                                        <div class="countdown-item">
+                                            <div class="countdown-number" id="days">00</div>
+                                            <div class="countdown-label" data-translate="countdown_days">Tage</div>
+                                        </div>
+                                        <div class="countdown-separator">:</div>
+                                        <div class="countdown-item">
+                                            <div class="countdown-number" id="hours">00</div>
+                                            <div class="countdown-label" data-translate="countdown_hours">Stunden</div>
+                                        </div>
+                                        <div class="countdown-separator">:</div>
+                                        <div class="countdown-item">
+                                            <div class="countdown-number" id="minutes">00</div>
+                                            <div class="countdown-label" data-translate="countdown_minutes">Minuten
+                                            </div>
+                                        </div>
+                                        <div class="countdown-separator">:</div>
+                                        <div class="countdown-item">
+                                            <div class="countdown-number" id="seconds">00</div>
+                                            <div class="countdown-label" data-translate="countdown_seconds">Sekunden
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <form name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="notify-form" netlify>
+                            <form name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                                class="notify-form" netlify>
                                 <input type="hidden" name="form-name" value="notify" />
 
                                 <div class="input-group">
                                     <input type="email" name="email" id="beta-email" class="notify-input"
-                                        placeholder="Deine E-Mail-Adresse" required>
-                                    <button type="submit" class="notify-btn" id="notify-button">Benachrichtigen</button>
+                                        placeholder="Deine E-Mail-Adresse" data-translate="notify_placeholder" required>
+                                    <button type="submit" class="notify-btn" id="notify-button" data-translate="notify_btn"><!--inserted from de.json--></button>
                                 </div>
 
                                 <p class="form-note" id="form-message" style="margin-top: 15px;"></p>
@@ -159,7 +168,7 @@
         <section class="blog">
             <div class="container">
                 <h2 class="section-title" data-translate="blog_teaser_title"><!--inserted from de.json--></h2>
-                <p class="section-subtitle">Die neuesten Updates und Einblicke zu GeoBoost</p>
+                <p class="section-subtitle" data-translate="blog_teaser_subtitle"><!--inserted from de.json--></p>
 
                 <div class="blog-grid">
                     <!-- Hier werden die Blogposts dynamisch eingefügt -->
@@ -249,6 +258,8 @@
 
     <script type="module" src="scripts/language.js"></script>
     <script type="module" src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 </body>
 
 </html>

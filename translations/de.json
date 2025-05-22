@@ -52,6 +52,7 @@
     "faq6_question": "Kann ich GeoBoost in meine bestehende Anwendung integrieren?",
     "faq6_answer": "Ja, GeoBoost bietet eine umfassende API und SDKs für gängige Programmiersprachen, die eine einfache Integration in bestehende Systeme ermöglichen.",
     "blog_teaser_title": "Aktuelles aus unserem Blog",
+    "blog_teaser_subtitle": "Die neuesten Updates und Einblicke zu GeoBoost",
     "blog_subtitle": "Neueste Einblicke, Updates und technische Deep Dives zu unserer revolutionären Geodaten-Technologie",
     "blog-archive-link": "Alle Blogposts anzeigen",
     "read_more_link": "Weiterlesen →"

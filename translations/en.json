@@ -16,7 +16,7 @@
     "help_point2_desc": "Get tailored assistance for your specific questions and challenges.",
     "title": "GeoBoost",
     "tagline": "Boost your visibility in ChatGPT and co.",
-    "subtitle": "Keep track of your brand and content across AI search platforms like ChatGPT, Perplexity, and Google Overview with our innovative dashboard. <br>The beta is coming very soon!",
+    "subtitle": "Keep track of your brand and content across AI search platforms like ChatGPT, Perplexity, and Google Overview with our innovative dashboard. The beta is coming very soon!",
     "notify_placeholder": "Your email address",
     "notify_btn": "Notify me",
     "notify_note": "Sign up to test the beta as one of the first!",
@@ -52,6 +52,7 @@
     "faq6_question": "Can I integrate GeoBoost into my existing application?",
     "faq6_answer": "Yes, GeoBoost provides a comprehensive API and SDKs for common programming languages that enable easy integration into existing systems.",
     "blog_teaser_title": "Latest news from our blog",
+    "blog_teaser_subtitle": "The latest updates and insights on GeoBoost",
     "blog_subtitle": "Latest insights, updates and technical deep dives on our revolutionary geodata technology",
     "blog-archive-link": "Show all blog posts",
     "read_more_link": "Read more →"
