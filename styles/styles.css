@@ -255,10 +255,6 @@ header {
     /* Du kannst den Wert anpassen für mehr/weniger Sichtbarkeit */
 }
 
-.product-image {
-    width: 100%;
-}
-
 .image-glow {
     position: absolute;
     top: 0;
@@ -269,24 +265,6 @@ header {
     z-index: -1;
     animation: pulse 3s infinite alternate;
 }
-
-
-/* Responsive Anpassungen */
-@media (max-width: 1024px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-image {
-        order: -1;
-        margin-bottom: 50px;
-    }
-
-    .product-image {
-        max-width: 100%;
-    }
-}
-
 
 /* Tagline Styles */
 .tagline-wrapper {
@@ -850,12 +828,34 @@ footer {
     color: var(--secondary);
 }
 
+/* Responsive Anpassungen */
+@media (max-width: 1024px) {
+    
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .hero-image {
+        order: -1;
+        margin-bottom: 50px;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+}
 
 @media (max-width: 768px) {
     body {
         font-size: 15px;
         line-height: 1.5;
+    }
+
+    .header-home {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 100;
     }
 
     /* Header Anpassungen */
@@ -870,18 +870,16 @@ footer {
         justify-content: space-between;
     }
 
+    .features {
+        padding: 0;
+    }
+
     .branding {
         font-size: 1.5rem;
     }
 
     .branding .logo {
         height: 28px;
-    }
-
-    /* Hero Section */
-    .hero {
-        padding: 120px 0 60px;
-        min-height: auto;
     }
 
     h1 {

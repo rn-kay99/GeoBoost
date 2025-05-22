@@ -1,0 +1,76 @@
+/* Mobile First Fixes for .hero and overlapping content */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding-top: 10px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-background {
+        display: none;
+    }
+
+    .title-group {
+        padding: 0 15px;
+        margin-bottom: 10px;
+    }
+
+    .hero-combo {
+        margin-top: 20px;
+    }
+
+    .product-container {
+        position: static;
+    }
+
+    .product-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 20px 15px;
+    }
+
+    .product-image {
+        display: none;
+    }
+
+    .countdown-container {
+        background-image: url('../images/using_geoboost.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+        background-color: rgba(26, 26, 46, 0.7);
+        /* für Lesbarkeit */
+        padding: 20px;
+        border-radius: 15px;
+        /* border: 0; */
+        backdrop-filter: blur(8px);
+    }
+
+    .countdown-separator {
+        display: none;
+    }
+
+    .countdown-item:nth-of-type(3) {
+        display: none;
+    }
+
+    .notify-form {
+        padding: 0 15px;
+    }
+
+    .image-glow {
+        display: none;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
