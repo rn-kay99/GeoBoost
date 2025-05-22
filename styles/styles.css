@@ -999,6 +999,10 @@ footer {
         /* Apple empfiehlt mindestens 44px für tappbare Elemente */
     }
 
+    .blog-content{
+        padding: 10px;
+    }
+
     .notify-btn {
         padding: 18px;
     }

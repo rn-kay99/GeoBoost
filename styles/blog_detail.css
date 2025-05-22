@@ -137,6 +137,14 @@
 }
 
 @media (max-width: 768px) {
+    .blog-header{
+        padding: 30px 20px 10px 20px;
+    }
+    
+    .blog-header-content{
+        padding: 10px 5px;
+    }
+
     .blog-title {
         font-size: 2rem;
     }
