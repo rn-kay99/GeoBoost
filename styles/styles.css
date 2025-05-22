@@ -134,16 +134,13 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    text-decoration: none;
 }
 
 .branding .logo {
     height: 32px;
     /* Passe ggf. die Höhe an */
     width: auto;
-}
-
-.branding_name{
-    text-decoration: none;
 }
 
 /* Hero Section */
