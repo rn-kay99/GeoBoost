@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;family=Inter&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/blog.css">
+    <link rel="icon" type="image/png" href="images/geoboost_logo.png">
 </head>
 <body>
     <header>
@@ -31,12 +32,21 @@
 
     <main>
         <section class="blog-archive">
+            <header class="blog-header">
+                <!-- Bild ist außerhalb des Containers -->
+                <div class="blog-header-bg">
+                    <img src="images/blog_background.png" alt="Blog Header Background">
+                </div>
+            
+                <!-- Inhalt bleibt im Container -->
+                <div class="container">
+                    <div class="blog-header-content">
+                        <h1 class="blog-title">GeoBoost Blog</h1>
+                        <p class="blog-subtitle" data-translate="blog_subtitle"><!--inserted from de.json--></p>
+                    </div>
+                </div>
+            </header>
             <div class="container">
-                <header class="blog-header">
-                    <h1 class="blog-title">GeoBoost Blog</h1>
-                    <p class="blog-subtitle" data-translate="blog_subtitle"><!--inserted from de.json--></p>
-                </header>
-                
                 <div class="blog-grid" id="blogPostsContainer">
                     <!-- Blogposts werden hier dynamisch eingefügt -->
                 </div>

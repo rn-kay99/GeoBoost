@@ -33,57 +33,38 @@ function setupScrollIndicator() {
 
 // Form Submission
 function setupForm() {
-    document.getElementById('notify-button').addEventListener('click', async function () {
-        const emailInput = document.getElementById('beta-email');
-        const messageDiv = document.getElementById('form-message');
-        const email = emailInput.value.trim();
+    const form = document.getElementById('notify-form');
+    const emailInput = document.getElementById('beta-email');
+    const messageDiv = document.getElementById('form-message');
+    const submitBtn = document.getElementById('notify-button');
 
-        // Reset states
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Verhindert sofortiges Absenden
+
+        const email = emailInput.value.trim();
         messageDiv.style.display = 'none';
         emailInput.classList.remove('error');
 
-        // Validate email
+        // Clientseitige Prüfung
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             emailInput.classList.add('error');
             showMessage('Bitte gib eine gültige E-Mail-Adresse ein', 'error');
             return;
         }
 
-        try {
-            // Disable button during submission
-            this.disabled = true;
-            this.textContent = 'Wird gesendet...';
+        // Erfolgreiche Validierung: Button deaktivieren & Text ändern
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Wird gesendet...';
 
-            // Send to backend
-            const response = await fetch('https://your-api-endpoint.com/subscribe', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email: email })
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                showMessage('Erfolgreich angemeldet! Du erhältst bald weitere Infos.', 'success');
-                emailInput.value = ''; // Clear field
-            } else {
-                showMessage(data.message || 'Fehler beim Anmelden', 'error');
-            }
-        } catch (error) {
-            showMessage('Netzwerkfehler - bitte versuche es später erneut', 'error');
-        } finally {
-            this.disabled = false;
-            this.textContent = 'Benachrichtigen';
-        }
-
-        function showMessage(text, type) {
-            messageDiv.textContent = text;
-            messageDiv.style.color = type === 'success' ? '#88d3ce' : '#ff6b6b';
-            messageDiv.style.display = 'block';
-        }
+        // Formular normal absenden (Netlify verarbeitet es)
+        form.submit();
     });
+
+    function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.style.color = type === 'success' ? '#88d3ce' : '#ff6b6b';
+        messageDiv.style.display = 'block';
+    }
 }
 
 // FAQ Accordion

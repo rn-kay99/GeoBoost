@@ -154,6 +154,16 @@ textarea.form-input {
     flex: 1;
 }
 
+.contact-info-text a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-text a:hover {
+    color: var(--secondary);
+}
+
 .contact-info-text h4 {
     margin-bottom: 5px;
     font-weight: 600;
@@ -162,6 +172,10 @@ textarea.form-input {
 .contact-info-text p {
     opacity: 0.8;
     line-height: 1.6;
+}
+
+.contact-info-icon i {
+    color: var(--light); 
 }
 
 .help-points {
@@ -178,6 +192,8 @@ textarea.form-input {
     margin-right: 10px;
     font-size: 1.2rem;
 }
+
+
 
 /* Responsive */
 @media (max-width: 1024px) {
