@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Labs | GeoBoost - Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;family=Inter&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header class="header-home">
+        <div class="header-container">
+            <a href="index.html" class="branding">
+                <img src="images/geoboost_logo.png" alt="GeoBoost Logo" class="logo" />
+                <span>Cap Labs</span>
+            </a>
+            <div class="header-right">
+                <a href="contact.html" class="contact-link" data-translate="contact"><!--inserted from de.json--></a>
+                <div class="language-switcher">
+                    <button class="language-btn active" data-lang="de">DE</button>
+                    <span class="language-divider">|</span>
+                    <button class="language-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="title-group">
+
+                        <h1>GeoBoost</h1>
+                        <div class="tagline-wrapper">
+                            <span class="tagline-arrow">➤</span>
+                            <div class="tagline" data-translate="tagline"><!--inserted from de.json--></div>
+                        </div>
+                        <p class="subtitle" data-translate="subtitle"><!--inserted from de.json--></p>
+                    </div>
+                </div>
+
+                <div class="hero-combo">
+                    <div class="product-container">
+                        <img src="images/using_geoboost.png" alt="GeoBoost in Aktion" class="product-image" />
+
+                        <div class="product-content">
+                            <div class="countdown-overlay">
+                                <div class="countdown">
+                                    <div class="countdown-item">
+                                        <div class="countdown-number" id="days">00</div>
+                                        <div class="countdown-label" data-translate="countdown_days">Tage</div>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <div class="countdown-number" id="hours">00</div>
+                                        <div class="countdown-label" data-translate="countdown_hours">Stunden</div>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <div class="countdown-number" id="minutes">00</div>
+                                        <div class="countdown-label" data-translate="countdown_minutes">Minuten</div>
+                                    </div>
+                                    <div class="countdown-item">
+                                        <div class="countdown-number" id="seconds">00</div>
+                                        <div class="countdown-label" data-translate="countdown_seconds">Sekunden</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="notify-form">
+                                <div class="input-group">
+                                    <input type="email" id="beta-email" class="notify-input"
+                                        data-translate="notify_placeholder" placeholder="Deine E-Mail-Adresse" required>
+                                    <button type="button" class="notify-btn" id="notify-button"
+                                        data-translate="notify_btn">Benachrichtigen</button>
+                                </div>
+                                <p class="form-note" data-translate="notify_note">Trag dich ein und teste die Beta als
+                                    einer der Ersten!</p>
+                                <div id="form-message" style="display: none; margin-top: 15px;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="image-glow"></div>
+                    </div>
+
+                    <div class="scroll-indicator">
+                        <div class="scroll-circle">
+                            <svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span class="scroll-hint" data-translate="scroll_hint">Scroll</span>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title" data-translate="features_title"><!--inserted from de.json--></h2>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3 class="feature-title" data-translate="feature1_title"><!--inserted from de.json--></h3>
+                        <p class="feature-desc" data-translate="feature1_desc"><!--inserted from de.json--></p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🖥️</div>
+                        <h3 class="feature-title" data-translate="feature2_title"><!--inserted from de.json--></h3>
+                        <p class="feature-desc" data-translate="feature2_desc"><!--inserted from de.json--></p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3 class="feature-title" data-translate="feature3_title"><!--inserted from de.json--></h3>
+                        <p class="feature-desc" data-translate="feature3_desc"><!--inserted from de.json--></p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3 class="feature-title" data-translate="feature4_title"><!--inserted from de.json--></h3>
+                        <p class="feature-desc" data-translate="feature4_desc"><!--inserted from de.json--></p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔭</div>
+                        <h3 class="feature-title" data-translate="feature5_title"><!--inserted from de.json--></h3>
+                        <p class="feature-desc" data-translate="feature5_desc"><!--inserted from de.json--></p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🔐</div>
+                        <h3 class="feature-title" data-translate="feature6_title"><!--inserted from de.json--></h3>
+                        <p class="feature-desc" data-translate="feature6_desc"><!--inserted from de.json--></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog">
+            <div class="container">
+                <h2 class="section-title" data-translate="blog_teaser_title"><!--inserted from de.json--></h2>
+                <p class="section-subtitle">Die neuesten Updates und Einblicke zu GeoBoost</p>
+
+                <div class="blog-grid">
+                    <!-- Hier werden die Blogposts dynamisch eingefügt -->
+                    <div class="blog-post featured">
+                        <div class="blog-image">
+                            <img src="blog-placeholder.jpg" alt="Blog Post Bild" id="latest-blog-image">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date" id="latest-blog-date">1. Januar 2025</span>
+                            <h3 class="blog-title" id="latest-blog-title">Neuer Blogpost Titel</h3>
+                            <p class="blog-excerpt" id="latest-blog-excerpt">Hier kommt eine kurze Zusammenfassung des
+                                neuesten Blogposts...</p>
+                            <a href="#" class="blog-link" id="latest-blog-link"
+                                data-translate="read_more_link">Weiterlesen →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-archive-link">
+                    <a href="/blog.html" data-translate="blog-archive-link"><!--inserted from de.json--></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title" data-translate="faq_title"><!--inserted from de.json--></h2>
+                <p class="section-subtitle" data-translate="faq_subtitle"><!--inserted from de.json--></p>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question" data-translate="faq1_question"><!--inserted from de.json--></h3>
+                        <div class="faq-answer">
+                            <p data-translate="faq1_answer"><!--inserted from de.json--></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question" data-translate="faq2_question"><!--inserted from de.json--></h3>
+                        <div class="faq-answer">
+                            <p data-translate="faq2_answer"><!--inserted from de.json--></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question" data-translate="faq3_question"><!--inserted from de.json--></h3>
+                        <div class="faq-answer">
+                            <p data-translate="faq3_answer"><!--inserted from de.json--></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question" data-translate="faq4_question"><!--inserted from de.json--></h3>
+                        <div class="faq-answer">
+                            <p data-translate="faq4_answer"><!--inserted from de.json--></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question" data-translate="faq5_question"><!--inserted from de.json--></h3>
+                        <div class="faq-answer">
+                            <p data-translate="faq5_answer"><!--inserted from de.json--></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question" data-translate="faq6_question"><!--inserted from de.json--></h3>
+                        <div class="faq-answer">
+                            <p data-translate="faq6_answer"><!--inserted from de.json--></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/kay-steinbauer-6256912b7" class="social-link">LinkedIn</a>
+            </div>
+            <p class="copyright">© 2025 Cool Labs. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/language.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

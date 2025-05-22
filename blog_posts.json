@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": {
+            "de": "GeoBoost Beta: Erste Einblicke in unsere Technologie",
+            "en": "GeoBoost Beta: First Look at Our Technology"
+        },
+        "excerpt": {
+            "de": "Entdecken Sie, wie unsere revolutionäre Geodaten-Analyse Unternehmen transformieren wird.",
+            "en": "Discover how our revolutionary geodata analysis will transform businesses."
+        },
+        "date": {
+            "de": "22. Mai 2025",
+            "en": "22. May 2025"
+        },
+        "image": "images/blog_beta_image.png",
+        "category": {
+            "de": "TECHNOLOGIE",
+            "en": "TECHNOLOGY"
+        },
+        "link": "blog/tech-preview.html"
+    },
+    {
+        "id": 2,
+        "title": {
+            "de": "Warum Geodaten die Zukunft der KI sind",
+            "en": "Why Geodata is the Future of AI"
+        },
+        "excerpt": {
+            "de": "Wie GeoBoost die Art und Weise verändert, wie KI-Systeme mit räumlichen Daten umgehen.",
+            "en": "How GeoBoost changes the way AI systems handle spatial data."
+        },
+        "date": {
+            "de": "25. Mai 2025",
+            "en": "25. May 2025"
+        },
+        "image": "images/blog_default_image.png",
+        "category": {
+            "de": "TECHNOLOGIE",
+            "en": "TECHNOLOGY"
+        },
+        "link": "blog/ai-future.html"
+    }
+]

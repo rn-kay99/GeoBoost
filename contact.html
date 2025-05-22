@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | GeoBoost - Cool Labs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;family=Inter&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+
+<body>
+    <header class="header-home">
+        <div class="header-container">
+            <a href="index.html" class="branding">
+                <img src="images/geoboost_logo.png" alt="GeoBoost Logo" class="logo" />
+                <span>Cap Labs</span>
+            </a>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button class="language-btn active" data-lang="de">DE</button>
+                    <span class="language-divider">|</span>
+                    <button class="language-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section" id="contact">
+            <div class="contact-background"></div>
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <h2 class="section-title" data-translate="contact"><!--inserted from de.json--></h2>
+                    <p class="section-subtitle" data-translate="contact_subtitle"><!--inserted from de.json--></p>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" class="form-input" placeholder="Your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="Your email address" data-translate="contact_email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label" data-translate="contact_message"><!--inserted from de.json--></label>
+                            <textarea id="message" class="form-input" placeholder="How can we help you?" data-translate="help_title"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn" data-translate="contact_submit"><!--inserted from de.json--></button>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <div class="contact-info-box">
+                        <h3 class="contact-info-title" data-translate="contact_info"><!--inserted from de.json--></h3>
+
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon">✉️</span>
+                            <div class="contact-info-text">
+                                <h4>Email</h4>
+                                <p>support@cool-labs.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon">📍</span>
+                            <div class="contact-info-text">
+                                <h4 data-translate="contact_location"><!--inserted from de.json--></h4>
+                                <p data-translate="my_contact_location"><!--inserted from de.json--></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <span class="contact-info-icon">📞</span>
+                            <div class="contact-info-text">
+                                <h4>Phone</h4>
+                                <p>+49 172 7766125</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-box">
+                        <h3 class="contact-info-title">How We Can Help</h3>
+                        <p data-translate="help_text"><!--inserted from de.json--></p>
+
+                        <div class="help-points">
+                            <div class="help-point">
+                                <span class="help-point-icon">⚡</span>
+                                <div>
+                                    <h4 data-translate="help_point1_title"><!--inserted from de.json--></h4>
+                                    <p data-translate="help_point1_desc"><!--inserted from de.json--></p>
+                                </div>
+                            </div>
+
+                            <div class="help-point">
+                                <span class="help-point-icon">🎯</span>
+                                <div>
+                                    <h4 data-translate="help_point2_title"><!--inserted from de.json--></h4>
+                                    <p data-translate="help_point2_desc"><!--inserted from de.json--></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/kay-steinbauer-6256912b7" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+            <p class="copyright">© 2025 Cool Labs. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    
+    <script type="module" src="scripts/language.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+
+</html>
