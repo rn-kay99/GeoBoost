@@ -34,7 +34,7 @@ header {
 
 }
 
-.header-home {
+.header-home, .header-contact {
     position: absolute;
     top: 0;
     left: 0;
@@ -101,6 +101,7 @@ header {
 
 .language-btn {
     background: none;
+    text-decoration: none;
     border: none;
     color: var(--light);
     cursor: pointer;
@@ -848,7 +849,7 @@ footer {
     transition: transform 0.5s ease;
 }
 
-.blog-content {
+.blog-teaser {
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -932,11 +933,16 @@ footer {
         padding: 0 15px;
     }
 
-    .header-home {
+    .header-home,
+    .header-contact {
         position: relative;
         top: 0;
         left: 0;
         z-index: 100;
+    }
+
+    .header-contact {
+        padding-bottom: 0;
     }
 
     /* Header Anpassungen */
@@ -1064,7 +1070,6 @@ footer {
         display: none;
     }
 
-    .language-btn,
     .faq-question,
     .feature-card,
     .blog-post {
@@ -1072,7 +1077,7 @@ footer {
         /* Apple empfiehlt mindestens 44px für tappbare Elemente */
     }
 
-    .blog-content{
+    .blog-teaser{
         padding: 10px;
     }
 

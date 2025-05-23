@@ -1,0 +1,98 @@
+---
+layout: base.njk
+title: Kontakt | GeoBoost - Cool Labs
+lang: de
+permalink: /de/contact.html
+pageType: contact
+---
+
+{% set t = translations[lang] %}
+<link rel="stylesheet" href="/styles/contact.css">
+
+<section class="contact-section" id="contact">
+  <div class="contact-background"></div>
+  <div class="contact-container">
+    <div class="contact-form-container">
+      <h2 class="section-title">{{ t.contact }}</h2>
+      <p class="section-subtitle">{{ t.contact_subtitle }}</p>
+
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" class="form-input" placeholder="Dein Name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="Deine E-Mail-Adresse" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">{{ t.contact_message }}</label>
+          <textarea id="message" class="form-input" placeholder="{{ t.help_title }}" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">{{ t.contact_submit }}</button>
+      </form>
+    </div>
+
+    <div class="contact-info-container">
+      <div class="contact-info-box">
+        <h3 class="contact-info-title">{{ t.contact_info }}</h3>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon">✉️</span>
+          <div class="contact-info-text">
+            <h4>Email</h4>
+            <p>support@cool-labs.com</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon">📍</span>
+          <div class="contact-info-text">
+            <h4>{{ t.contact_location }}</h4>
+            <p>{{ t.my_contact_location }}</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon"><i class="fab fa-linkedin"></i></span>
+          <div class="contact-info-text">
+            <h4>LinkedIn</h4>
+            <p>
+              <a href="https://www.linkedin.com/in/kay-steinbauer-6256912b7" target="_blank" rel="noopener">
+                Kay Steinbauer
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-info-box">
+        <h3 class="contact-info-title">{{ t.help_title }}</h3>
+        <p>{{ t.help_text }}</p>
+
+        <div class="help-points">
+          <div class="help-point">
+            <span class="help-point-icon">⚡</span>
+            <div>
+              <h4>{{ t.help_point1_title }}</h4>
+              <p>{{ t.help_point1_desc }}</p>
+            </div>
+          </div>
+
+          <div class="help-point">
+            <span class="help-point-icon">🎯</span>
+            <div>
+              <h4>{{ t.help_point2_title }}</h4>
+              <p>{{ t.help_point2_desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="/scripts/contact.js"></script>

@@ -1,0 +1,16 @@
+<header class="header header-{{ pageType | default("default") }}">
+    <div class="header-container">
+        <a href="/{{lang}}" class="branding">
+            <img src="/images/geoboost_logo.png" alt="GeoBoost Logo" class="logo"/>
+            <span>KSB Labs</span>
+        </a>
+        <div class="header-right">
+            <a href="/{{lang}}/contact.html" class="contact-link">{{ t.contact }}</a>
+            <div class="language-switcher">
+                <a href="/de/" class="language-btn {% if lang == 'de' %}active{% endif %}">DE</a>
+                <span class="language-divider">|</span>
+                <a href="/en/" class="language-btn {% if lang == 'en' %}active{% endif %}">EN</a>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "slug": "beta-tech-preview",
         "title": {
             "de": "GeoBoost Beta: Erste Einblicke in unsere Technologie",
             "en": "GeoBoost Beta: First Look at Our Technology"
@@ -19,10 +20,18 @@
             "de": "UPDATE",
             "en": "UPDATE"
         },
-        "link": "blog/tech-preview.html"
+        "content": {
+            "de": "<h2>Die Kerninnovationen</h2><p>GeoBoost basiert auf drei revolutionären Säulen...</p>...",
+            "en": "<h2>Core Innovations</h2><p>GeoBoost is based on three revolutionary pillars...</p>..."
+        },
+        "tags": {
+          "de": ["Beta", "Technologie", "Geodaten", "Innovation"],
+          "en": ["Beta", "Technology", "Geodata", "Innovation"]
+        }
     },
     {
         "id": 2,
+        "slug": "what-is-geo",
         "title": {
             "de": "Was ist GEO? Der geheime Code für KI-Sichtbarkeit",
             "en": "What is GEO? The secret code for AI visibility"
@@ -41,6 +50,13 @@
             "de": "TECHNOLOGIE",
             "en": "TECHNOLOGY"
         },
-        "link": "blog/why_geo_blog.html"
+        "content": {
+            "de": "<h2>Die Kerninnovationen</h2><p>GeoBoost basiert auf drei revolutionären Säulen...</p>...",
+            "en": "<h2>Core Innovations</h2><p>GeoBoost is based on three revolutionary pillars...</p>..."
+        },
+        "tags": {
+          "de": ["Beta", "Technologie", "Geodaten", "Innovation"],
+          "en": ["Beta", "Technology", "Geodata", "Innovation"]
+        }
     }
 ]

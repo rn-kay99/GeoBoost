@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: GeoBoost Blog | Cool Labs
+lang: de
+permalink: /de/blog.html
+pageType: blog
+---
+
+{% set t = translations[lang] %} <link rel="stylesheet" href="/styles/blog.css"/>
+<section class="blog-archive">
+    <header class="blog-header">
+        <div class="blog-header-bg">
+            <img src="/images/blog_background.png" alt="Blog Header Background"></div>
+            <div class="container">
+                <div class="blog-header-content">
+                    <h1 class="blog-title">GeoBoost Blog</h1>
+                    <p class="blog-subtitle">{{ t.blog_subtitle }}</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="blog-sort">
+                <label for="sortSelect">{{ t.blog_sortby }}</label>
+                <select id="sortSelect">
+                    <option value="date-newest">{{ t.blog_sortby_newest }}</option>
+                    <option value="date-oldest">{{ t.blog_sortby_oldest }}</option>
+                    <option value="title">{{ t.blog_sortby_title }}</option>
+                    <option value="category">{{ t.blog_sortby_category }}</option>
+                </select>
+            </div>
+            <div
+                class="blog-grid" id="blogPostsContainer"><!-- JS rendert hier rein -->
+            </div>
+        </div>
+    </section>
+    <script>
+        const lang = "{{ lang }}"; // kommt aus Frontmatter
+    </script>
+    <script type="module" src="/scripts/blog.js"></script>

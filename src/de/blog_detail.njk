@@ -1,0 +1,40 @@
+---
+pagination:
+  data: blog_posts
+  size: 1
+  alias: post
+  addAllPagesToCollections: true
+permalink: "/de/blog/{{ post.slug }}.html"
+layout: base.njk
+lang: de
+pageType: blog_detail
+---
+
+<link rel="stylesheet" href="/styles/blog_detail.css">
+    {% set t = translations[lang] %}
+    <article class="blog-article">
+        <a href="/{{lang}}/blog.html" class="back-to-blog-link">{{t.blog_back_button}}</a>
+        <header class="blog-header">
+            <div class="blog-hero-background">
+                <img src="/{{ post.image }}" alt="{{ post.title[lang] }}" class="blog-hero-image"></div>
+                <div class="blog-header-content">
+                    <span class="blog-category">{{ post.category[lang] }}</span>
+                    <h1 class="blog-title">{{ post.title[lang] }}</h1>
+                    <div class="blog-meta">
+                        <span class="blog-date">{{ post.date[lang] }}</span>
+                        <span class="blog-reading-time">6 Min. Lesezeit</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% if post.tags[lang] %}
+            <div class="blog-tags">
+                {% for tag in post.tags[lang] %}
+                    <span class="blog-tag">#{{ tag }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="blog-content">
+            {{ post.content[lang] | safe }}
+        </div>
+    </article>

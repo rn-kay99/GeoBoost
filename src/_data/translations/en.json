@@ -55,10 +55,69 @@
     "blog_teaser_subtitle": "The latest updates and insights on GeoBoost",
     "blog_subtitle": "Latest insights, updates and technical deep dives on our revolutionary geodata technology",
     "blog-archive-link": "Show all blog posts",
+    "blog_back_button": "← Back to the blog",
     "blog_sortby": "Sort by:",
     "blog_sortby_newest": "Newest first",
     "blog_sortby_oldest": "Oldest first",
     "blog_sortby_title": "Title A-Z",
     "blog_sortby_category": "Category",
-    "read_more_link": "Read more →"
+    "read_more_link": "Read more →",
+    "features": [
+        {
+            "icon": "🔍",
+            "title": "AI Visibility Analysis",
+            "desc": "Monitor in real time how your company appears in ChatGPT and similar tools."
+        },
+        {
+            "icon": "🖥️",
+            "title": "GeoBoost Dashboard",
+            "desc": "Centralized overview with real-time monitoring and action recommendations."
+        },
+        {
+            "icon": "⚙️",
+            "title": "Code & API Access",
+            "desc": "Connect your systems directly via flexible interfaces and structured data formats."
+        },
+        {
+            "icon": "🧠",
+            "title": "AI-Based Optimization",
+            "desc": "GeoBoost analyzes AI answers and suggests content, term, and structure optimizations."
+        },
+        {
+            "icon": "🔭",
+            "title": "Transparent Analytics",
+            "desc": "Track hits, context, and reach metrics – clearly visualized and exportable."
+        },
+        {
+            "icon": "🔐",
+            "title": "Privacy & Control",
+            "desc": "Your data belongs to you. We’re GDPR-compliant and offer full control over all content."
+        }
+    ],
+    "faq": [
+        {
+            "question": "When will the beta version be available?",
+            "answer": "We plan to launch the beta version in August 2025."
+        },
+        {
+            "question": "How can I join the beta?",
+            "answer": "Simply enter your email – we’ll notify you when it launches."
+        },
+        {
+            "question": "What are the system requirements?",
+            "answer": "GeoBoost runs in all modern browsers and offers APIs for Node.js, Python & more."
+        },
+        {
+            "question": "Is there a free version?",
+            "answer": "Yes! The beta is completely free. After launch, we’ll offer a freemium model."
+        },
+        {
+            "question": "What makes GeoBoost unique?",
+            "answer": "GeoBoost combines geodata with AI analysis in an intuitive dashboard."
+        },
+        {
+            "question": "Can I integrate GeoBoost into my system?",
+            "answer": "Yes – we offer flexible APIs and SDKs for seamless integration."
+        }
+    ]
 }

@@ -1,1 +1,32 @@
+# Node modules
+node_modules/
+
+# Output directory
+dist/
+_output/
+
+# System files
 .DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: VSCode settings
+.vscode/
+
+# Eleventy cache
+.cache/
+
+# Environment variables (wenn du welche nutzt)
+.env
+.env.local
+.env.*.local
+
+# macOS metadata
+*.DS_Store
+
+# Netlify deploy state (optional)
+.netlify/

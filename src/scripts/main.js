@@ -1,7 +1,3 @@
-import { initLanguageSystem } from './language.js';
-let blogPosts = []; // Globale Variable für Blogposts
-
-
 // Countdown Timer
 function updateCountdown() {
     const betaDate = new Date('2025-08-01T00:00:00').getTime();
@@ -129,7 +125,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupScrollIndicator();
     setupForm();
     setupFAQ();
-    initLanguageSystem();
 
     if ('loading' in HTMLImageElement.prototype === false) {
             const script = document.createElement('script');

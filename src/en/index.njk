@@ -1,0 +1,132 @@
+---
+layout: base.njk
+lang: en
+title: KSB Labs | GeoBoost - Coming Soon
+pageType: home
+---
+
+{% set latest = blog_posts[blog_posts.length - 1] %}
+{% set t = translations[lang] %}
+<section class="hero">
+    <div class="hero-background" id="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="title-group">
+                <div class="title-with-badge">
+                    <h1>{{ t.title }}</h1>
+                    <span class="live-badge-inline">BETA</span>
+                </div>
+                <div class="tagline-wrapper">
+                    <span class="tagline-arrow">➔</span>
+                    <div class="tagline">{{ t.tagline }}</div>
+                </div>
+                <p class="subtitle">{{ t.subtitle }}</p>
+            </div>
+        </div>
+        <div class="hero-combo">
+            <div class="product-container">
+                <img src="/images/using_geoboost.png" alt="GeoBoost in Aktion" class="product-image"/>
+                <div class="product-content">
+                    <div class="countdown-overlay">
+                        <div class="countdown-container">
+                            <div class="countdown-title">Beta in</div>
+                            <div class="countdown">
+                                <div class="countdown-item">
+                                    <div class="countdown-number" id="days">00</div>
+                                    <div class="countdown-label">{{ t.countdown_days }}</div>
+                                </div>
+                                <div class="countdown-separator">:</div>
+                                <div class="countdown-item">
+                                    <div class="countdown-number" id="hours">00</div>
+                                    <div class="countdown-label">{{ t.countdown_hours }}</div>
+                                </div>
+                                <div class="countdown-separator">:</div>
+                                <div class="countdown-item">
+                                    <div class="countdown-number" id="minutes">00</div>
+                                    <div class="countdown-label">{{ t.countdown_minutes }}</div>
+                                </div>
+                                <div class="countdown-separator">:</div>
+                                <div class="countdown-item">
+                                    <div class="countdown-number" id="seconds">00</div>
+                                    <div class="countdown-label">{{ t.countdown_seconds }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form name="notify" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="notify-form" netlify>
+                        <input type="hidden" name="form-name" value="notify"/>
+                        <div class="input-group">
+                            <input type="email" name="email" id="beta-email" class="notify-input" placeholder="{{ t.notify_placeholder }}" required>
+                                <button type="submit" class="notify-btn" id="notify-button">{{ t.notify_btn }}</button>
+                            </div>
+                            <p class="form-note" id="form-message" style="margin-top: 15px;"></p>
+                        </form>
+                    </div>
+                    <div class="image-glow"></div>
+                </div>
+                <div class="scroll-indicator">
+                    <div class="scroll-circle">
+                        <svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="scroll-hint">{{ t.scroll_hint }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">{{ t.features_title }}</h2>
+        <div class="features-grid">
+            {% for f in t.features %}
+                <div class="feature-card">
+                    <div class="feature-icon">{{ f.icon }}</div>
+                    <h3 class="feature-title">{{ f.title }}</h3>
+                    <p class="feature-desc">{{ f.desc }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="blog">
+    <div class="container">
+        <h2 class="section-title">{{ t.blog_teaser_title }}</h2>
+        <p class="section-subtitle">{{ t.blog_teaser_subtitle }}</p>
+        <div class="blog-grid">
+            <div class="blog-post featured">
+                <div class="blog-image">
+                    <img src="/{{ latest.image }}" alt="{{ latest.title[lang] }}"></div>
+                    <div class="blog-teaser">
+                        <span class="blog-date">{{ latest.date[lang] }}</span>
+                        <h3 class="blog-title">{{ latest.title[lang] }}</h3>
+                        <p class="blog-excerpt">{{ latest.excerpt[lang] }}</p>
+                        <a href="/{{lang}}/blog/{{latest.slug}}.html" class="blog-link">{{ t.read_more_link }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-archive-link">
+                <a href="/en/blog.html">{{ t["blog-archive-link"] }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <div class="container">
+        <h2 class="section-title">{{ t.faq_title }}</h2>
+        <p class="section-subtitle">{{ t.faq_subtitle }}</p>
+        <div class="faq-grid">
+            {% for item in t.faq %}
+                <div class="faq-item">
+                    <h3 class="faq-question">{{ item.question }}</h3>
+                    <div class="faq-answer">
+                        <p>{{ item.answer }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<script type="module" src="/scripts/main.js"></script>
