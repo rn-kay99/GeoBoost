@@ -11,9 +11,22 @@
         margin-bottom: 20px;
     }
 
-    /* .hero-background {
+    .hero-background {
         display: none;
-    } */
+    }
+
+    .hero-background--mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../images/mood_stars.png') no-repeat center center;
+        background-size: cover;
+        z-index: 0;
+        opacity: 0.4;
+        /* Du kannst den Wert anpassen für mehr/weniger Sichtbarkeit */
+    }
 
     .title-group {
         padding: 0 15px;
