@@ -1,0 +1,118 @@
+/* Footer */
+footer {
+    text-align: center;
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, 
+        rgba(15, 15, 35, 0.9), 
+        rgba(10, 10, 25, 1));
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(110, 69, 226, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(136, 211, 206, 0.1) 0%, transparent 30%);
+    z-index: 0;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.social-link {
+    color: var(--light);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-link:hover {
+    color: var(--secondary);
+    background: rgba(136, 211, 206, 0.1);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(136, 211, 206, 0.2);
+}
+
+.legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.legal-link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.legal-link:hover {
+    color: var(--secondary);
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
+}
+
+.copyright {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+/* Animation für Social Links */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.social-link:hover {
+    animation: float 1.5s ease-in-out infinite;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 0 20px;
+    }
+    
+    .social-links {
+        gap: 15px;
+    }
+    
+    .legal-links {
+        gap: 10px;
+    }
+}

@@ -101,7 +101,9 @@ pageType: home
                     <img src="/{{ latest.image }}" alt="{{ latest.title[lang] }}"></div>
                     <div class="blog-teaser">
                         <span class="blog-date">{{ latest.date[lang] }}</span>
-                        <h3 class="blog-title">{{ latest.title[lang] }}</h3>
+                        <a href="/{{ lang }}/blog/{{ latest.slug }}.html" class="blog-title-link">
+                            <h3 class="blog-title">{{ latest.title[lang] }}</h3>
+                        </a>
                         <p class="blog-excerpt">{{ latest.excerpt[lang] }}</p>
                         <a href="/{{lang}}/blog/{{latest.slug}}.html" class="blog-link">{{ t.read_more_link }}</a>
                     </div>

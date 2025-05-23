@@ -1,0 +1,151 @@
+/* Imprint Section */
+.imprint {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, 
+        rgba(15, 15, 35, 0.9), 
+        rgba(26, 26, 60, 0.95));
+}
+
+.imprint-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.imprint-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, var(--light), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.imprint-subtitle {
+    font-size: 1.5rem;
+    color: var(--light);
+    opacity: 0.8;
+}
+
+.highlight {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.imprint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.imprint-card {
+    background: rgba(20, 20, 45, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid rgba(136, 211, 206, 0.2);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.imprint-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at center, 
+        rgba(110, 69, 226, 0.1) 0%, 
+        transparent 70%
+    );
+    z-index: -1;
+}
+
+.imprint-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(136, 211, 206, 0.4);
+}
+
+.imprint-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.imprint-card h3 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--light);
+    position: relative;
+}
+
+.imprint-card h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    margin: 15px 0;
+    border-radius: 3px;
+}
+
+.imprint-content {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+.imprint-content a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.imprint-content a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.imprint-disclaimer {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+.imprint-disclaimer h3 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.imprint-disclaimer p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .imprint-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .imprint-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .imprint-card {
+        padding: 20px;
+    }
+}
