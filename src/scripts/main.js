@@ -33,6 +33,28 @@ function setupForm() {
     const emailInput = document.getElementById('beta-email');
     const messageDiv = document.getElementById('form-message');
     const submitButton = document.getElementById('notify-button');
+    const lang = document.documentElement.lang || 'de';
+
+    const messages = {
+        de: {
+            invalid: 'Bitte gib eine gültige E-Mail-Adresse ein',
+            success: 'Erfolgreich angemeldet! Du erhältst bald weitere Infos.',
+            error: 'Netzwerkfehler – bitte versuche es später erneut',
+            sending: 'Wird gesendet...',
+            done: 'Danke!',
+        },
+        en: {
+            invalid: 'Please enter a valid email address',
+            success: 'Successfully registered! You will receive more info soon.',
+            error: 'Network error – please try again later',
+            sending: 'Sending...',
+            done: 'Thanks!',
+        }
+    };
+
+    const t = messages[lang] || messages.de;
+
+    if (!form) return;
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -43,12 +65,12 @@ function setupForm() {
 
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             emailInput.classList.add('error');
-            showMessage('Bitte gib eine gültige E-Mail-Adresse ein', 'error');
+            showMessage(t.invalid, 'error');
             return;
         }
 
         submitButton.disabled = true;
-        submitButton.textContent = 'Wird gesendet...';
+        submitButton.textContent = t.sending;
 
         const formData = new FormData(form);
 
@@ -58,23 +80,24 @@ function setupForm() {
             body: new URLSearchParams(formData).toString()
         })
             .then(() => {
-                showMessage('Erfolgreich angemeldet! Du erhältst bald weitere Infos.', 'success');
+                showMessage(t.success, 'success');
                 emailInput.value = '';
 
-                // 🎉 Konfetti
-                confetti({
-                    particleCount: 100,
-                    spread: 70,
-                    origin: { y: 0.6 }
-                });
+                if (typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 }
+                    });
+                }
             })
             .catch(() => {
-                showMessage('Netzwerkfehler – bitte versuche es später erneut', 'error');
+                showMessage(t.error, 'error');
             })
             .finally(() => {
                 submitButton.style.opacity = '0.6';
                 submitButton.style.cursor = 'not-allowed';
-                submitButton.textContent = 'Danke!';
+                submitButton.textContent = t.done;
             });
     });
 
@@ -127,10 +150,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupFAQ();
 
     if ('loading' in HTMLImageElement.prototype === false) {
-            const script = document.createElement('script');
-            script.src = 'https://polyfill.io/v3/polyfill.min.js?features=loadingLazy';
-            document.head.appendChild(script);
-        }
+        const script = document.createElement('script');
+        script.src = 'https://polyfill.io/v3/polyfill.min.js?features=loadingLazy';
+        document.head.appendChild(script);
+    }
 });
 
 
