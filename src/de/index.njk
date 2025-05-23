@@ -7,9 +7,9 @@ pageType: home
 
 {% set latest = blog_posts[blog_posts.length - 1] %}
 {% set t = translations[lang] %}
+<div class="hero-background" id="hero-bg"></div>
 <section class="hero">
     <div class="container">
-        <div class="hero-background" id="hero-bg"></div>
         <div class="hero-content">
             <div class="title-group">
                 <div class="title-with-badge">
@@ -102,7 +102,7 @@ pageType: home
                         <span class="blog-date">{{ latest.date[lang] }}</span>
                         <h3 class="blog-title">{{ latest.title[lang] }}</h3>
                         <p class="blog-excerpt">{{ latest.excerpt[lang] }}</p>
-                        <a href="/{{lang}}/blog/{{latest.slug}}.html" class="blog-link">{{ t.read_more_link }}</a>
+                        <a href="/{{ lang }}/blog/{{ latest.slug }}.html" class="blog-link">{{ t.read_more_link }}</a>
                     </div>
                 </div>
             </div>
@@ -128,5 +128,4 @@ pageType: home
         </div>
     </div>
 </section>
-
 <script type="module" src="/scripts/main.js"></script>
