@@ -2,6 +2,7 @@
     {
         "id": 1,
         "slug": "beta-tech-preview",
+        "creator_id": "kay_steinbauer",
         "title": {
             "de": "GeoBoost Beta: Erste Einblicke in unsere Technologie",
             "en": "GeoBoost Beta: First Look at Our Technology"
@@ -37,8 +38,8 @@
             "en": "What is GEO? The secret code for AI visibility"
         },
         "excerpt": {
-            "de": "Wie GeoBoost die Art und Weise verändert, wie KI-Systeme mit räumlichen Daten umgehen.",
-            "en": "How GeoBoost changes the way AI systems handle spatial data."
+            "de": "KI Suchmaschinen, wie ChatGPT verändern wie wir auf Informationen zugreifen. Wer nicht in KI Antworten auftaucht, verliert.",
+            "en": "AI search engines like ChatGPT change how we access information. If you don't show up in AI answers, you lose."
         },
         "date": {
             "de": "25. Mai 2025",
@@ -51,12 +52,12 @@
             "en": "TECHNOLOGY"
         },
         "content": {
-            "de": "<h2>Die Kerninnovationen</h2><p>GeoBoost basiert auf drei revolutionären Säulen...</p>...",
+            "de": "Stell dir vor, du hast ein Café und plötzlich kommen 90% weniger Besucher. <h2>Die Kerninnovationen</h2><p>GeoBoost basiert auf drei revolutionären Säulen...</p>...",
             "en": "<h2>Core Innovations</h2><p>GeoBoost is based on three revolutionary pillars...</p>..."
         },
         "tags": {
-          "de": ["Beta", "Technologie", "Geodaten", "Innovation"],
-          "en": ["Beta", "Technology", "Geodata", "Innovation"]
+          "de": ["GEO", "SuchmaschinenOptimierung", "LLMs", "Marketing"],
+          "en": ["GEO", "SearchOptimization", "LLMs", "Marketing"]
         }
     }
 ]

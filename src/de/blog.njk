@@ -18,7 +18,6 @@ pageType: blog
                 </div>
             </div>
         </header>
-
         <div class="container">
             <div class="blog-sort">
                 <label for="sortSelect">{{ t.blog_sortby }}</label>
@@ -29,6 +28,7 @@ pageType: blog
                     <option value="category">{{ t.blog_sortby_category }}</option>
                 </select>
             </div>
+            <div class="blog-count" id="blogCount"></div>
             <div
                 class="blog-grid" id="blogPostsContainer"><!-- JS rendert hier rein -->
             </div>

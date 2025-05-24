@@ -1,32 +1,36 @@
 let posts = [];
 
 async function loadPosts() {
-  const res = await fetch('/_data/blog_posts.json');
-  posts = await res.json();
-  renderPosts();
+    const res = await fetch('/_data/blog_posts.json');
+    posts = await res.json();
+    renderPosts();
 }
 
 function renderPosts() {
-  const container = document.getElementById('blogPostsContainer');
-  const sort = document.getElementById('sortSelect')?.value || 'date-newest';
+    const container = document.getElementById('blogPostsContainer');
+    const sort = document.getElementById('sortSelect')?.value || 'date-newest';
 
-  let sorted = [...posts];
-  switch (sort) {
-    case 'date-oldest':
-      sorted.sort((a, b) => new Date(a.date.date_iso) - new Date(b.date.date_iso));
-      break;
-    case 'title':
-      sorted.sort((a, b) => a.title[lang].localeCompare(b.title[lang]));
-      break;
-    case 'category':
-      sorted.sort((a, b) => a.category[lang].localeCompare(b.category[lang]));
-      break;
-    case 'date-newest':
-    default:
-      sorted.sort((a, b) => new Date(b.date.date_iso) - new Date(a.date.date_iso));
-  }
+    let sorted = [...posts];
+    const countEl = document.getElementById('blogCount');
+    if (countEl) {
+        countEl.textContent = `${sorted.length} ${lang === 'en' ? 'posts found' : 'Beiträge gefunden'}`;
+    }
+    switch (sort) {
+        case 'date-oldest':
+            sorted.sort((a, b) => new Date(a.date.date_iso) - new Date(b.date.date_iso));
+            break;
+        case 'title':
+            sorted.sort((a, b) => a.title[lang].localeCompare(b.title[lang]));
+            break;
+        case 'category':
+            sorted.sort((a, b) => a.category[lang].localeCompare(b.category[lang]));
+            break;
+        case 'date-newest':
+        default:
+            sorted.sort((a, b) => new Date(b.date.date_iso) - new Date(a.date.date_iso));
+    }
 
-  container.innerHTML = sorted.map(post => `
+    container.innerHTML = sorted.map(post => `
     <article class="blog-card">
       <div class="blog-card-image">
         <img src="/${post.image}" alt="${post.title[lang]}" />
@@ -47,10 +51,10 @@ function renderPosts() {
 }
 
 function getReadMoreText() {
-  return lang === 'en' ? 'Read more →' : 'Weiterlesen →';
+    return lang === 'en' ? 'Read more →' : 'Weiterlesen →';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('sortSelect')?.addEventListener('change', renderPosts);
-  loadPosts();
+    document.getElementById('sortSelect')?.addEventListener('change', renderPosts);
+    loadPosts();
 });

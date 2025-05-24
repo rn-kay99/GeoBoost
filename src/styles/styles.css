@@ -776,11 +776,6 @@ h1 {
 }
 
 
-
-
-
-
-/* Blog */
 /* Blog Section */
 .blog {
     padding: 100px 0;
@@ -931,16 +926,18 @@ h1 {
         justify-content: space-between;
     }
 
-    .features {
-        padding: 20px 0;
-    }
-
     .branding {
         font-size: 1.5rem;
     }
 
     .branding .logo {
         height: 28px;
+    }
+
+    .features,
+    .blog,
+    .faq {
+        padding: 60px 0;
     }
 
     h1 {
