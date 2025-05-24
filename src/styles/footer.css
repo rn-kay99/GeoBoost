@@ -116,3 +116,16 @@ footer::before {
         gap: 10px;
     }
 }
+
+body.light-mode .legal-link{
+    color: black;
+}
+
+body.light-mode .social-link{
+    background: rgba(214, 214, 214, 0.455);
+}
+
+body.light-mode .legal-link:hover {
+    color: var(--secondary);
+    
+}

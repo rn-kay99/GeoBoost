@@ -1,9 +1,9 @@
-/* Privacy Section */
+/* Privacy Section - Base Styles */
 .privacy {
     padding: 80px 0;
     background: linear-gradient(to bottom, 
-        rgba(15, 15, 35, 0.95), 
-        rgba(10, 10, 25, 1));
+        var(--bg-gradient-start), 
+        var(--bg-gradient-end));
     position: relative;
     overflow: hidden;
 }
@@ -56,19 +56,20 @@
 }
 
 .privacy-card {
-    background: rgba(20, 20, 45, 0.6);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 30px;
-    border: 1px solid rgba(136, 211, 206, 0.2);
+    border: 1px solid var(--card-border);
     margin-bottom: 30px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--card-shadow);
 }
 
 .privacy-card:hover {
-    border-color: rgba(136, 211, 206, 0.4);
+    border-color: var(--secondary);
     transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(110, 69, 226, 0.15);
 }
 
 .privacy-card h2 {
@@ -88,7 +89,7 @@
 
 .privacy-card p, 
 .privacy-card ul {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-muted);
     line-height: 1.8;
     margin-bottom: 15px;
 }
@@ -115,6 +116,27 @@
     font-style: italic;
     color: var(--secondary);
     margin-top: 20px;
+}
+
+/* Light Mode Overrides */
+body.light-mode .privacy {
+    --bg-gradient-start: rgba(240, 240, 245, 0.95);
+    --bg-gradient-end: rgba(220, 220, 230, 1);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(0, 0, 0, 0.1);
+    --text-muted: rgba(26, 26, 46, 0.8);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --light: #1a1a2e;
+}
+
+body.light-mode .privacy::before {
+    background: 
+        radial-gradient(circle at 30% 70%, rgba(110, 69, 226, 0.05) 0%, transparent 30%),
+        radial-gradient(circle at 70% 30%, rgba(136, 211, 206, 0.05) 0%, transparent 30%);
+}
+
+body.light-mode .privacy-card:hover {
+    box-shadow: 0 12px 40px rgba(110, 69, 226, 0.1);
 }
 
 /* Responsive */

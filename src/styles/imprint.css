@@ -1,11 +1,11 @@
-/* Imprint Section */
+/* Imprint Section - Base Styles */
 .imprint {
     padding: 100px 0;
     position: relative;
     overflow: hidden;
     background: linear-gradient(to bottom, 
-        rgba(15, 15, 35, 0.9), 
-        rgba(26, 26, 60, 0.95));
+        var(--bg-gradient-start), 
+        var(--bg-gradient-end));
 }
 
 .imprint-header {
@@ -43,13 +43,13 @@
 }
 
 .imprint-card {
-    background: rgba(20, 20, 45, 0.6);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 30px;
-    border: 1px solid rgba(136, 211, 206, 0.2);
+    border: 1px solid var(--card-border);
     transition: all 0.4s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -71,8 +71,8 @@
 
 .imprint-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    border-color: rgba(136, 211, 206, 0.4);
+    box-shadow: 0 15px 40px rgba(110, 69, 226, 0.2);
+    border-color: var(--secondary);
 }
 
 .imprint-icon {
@@ -100,7 +100,7 @@
 }
 
 .imprint-content {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
@@ -116,11 +116,11 @@
 }
 
 .imprint-disclaimer {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--card-border);
     margin-top: 40px;
 }
 
@@ -132,10 +132,33 @@
 }
 
 .imprint-disclaimer p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
+/* Light Mode Overrides */
+body.light-mode {
+    --bg-gradient-start: rgba(240, 240, 245, 0.9);
+    --bg-gradient-end: rgba(220, 220, 230, 0.95);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-border: rgba(0, 0, 0, 0.1);
+    --text-muted: rgba(26, 26, 46, 0.8);
+    --light: #1a1a2e;
+}
+
+body.light-mode .imprint-card::before {
+    background: radial-gradient(
+        circle at center, 
+        rgba(110, 69, 226, 0.05) 0%, 
+        transparent 70%
+    );
+}
+
+body.light-mode .imprint-card:hover {
+    box-shadow: 0 15px 40px rgba(110, 69, 226, 0.15);
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .imprint-header h1 {
         font-size: 2.5rem;

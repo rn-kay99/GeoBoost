@@ -1,0 +1,232 @@
+/* Compact Theme Switcher */
+.theme-switcher-compact {
+    margin-left: 15px;
+    position: relative;
+}
+
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-icon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    /* stroke: currentColor; */
+    stroke: var(--light);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    transition: all 0.3s ease;
+}
+
+.light-icon {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.dark-icon {
+    opacity: 1;
+    transform: rotate(0);
+}
+
+/* Light Mode Styles */
+body.light-mode .light-icon {
+    opacity: 1;
+    transform: rotate(0);
+    stroke: var(--light);
+}
+
+body.light-mode .dark-icon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+body.light-mode .theme-toggle {
+    background: rgba(26, 26, 46, 0.1);
+}
+
+body.light-mode .theme-toggle:hover {
+    background: rgba(26, 26, 46, 0.2);
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    gap: 8px;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    color: var(--light);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-switch {
+    width: 50px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-switch:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.theme-switch-handle {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: var(--light);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.burger-menu {
+    display: none;
+    position: relative;
+  }
+  
+  .burger-icon {
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--dark);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 200px;
+    z-index: 999;
+  }
+  
+  .mobile-link {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .mobile-subsection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .theme-toggle-mobile {
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+/* Light Mode Styles */
+body.light-mode {
+    --primary: #6e45e2;
+    --secondary: #4a9f96;
+    --dark: #f8f9fa;
+    --light: #1a1a2e;
+    --accent: #ff6b6b;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+body.light-mode .header-home,
+body.light-mode .header-contact {
+    background: rgba(248, 249, 250, 0.9);
+}
+
+body.light-mode .feature-card,
+body.light-mode .faq-item,
+body.light-mode .blog-post,
+body.light-mode .countdown-container {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--light);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .notify-input {
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--light);
+}
+
+body.light-mode .notify-input:focus {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .theme-switch-handle {
+    transform: translateX(26px);
+    background: var(--light);
+}
+
+body.light-mode .theme-btn {
+    color: var(--light);
+}
+
+/* Anpassung für den Header im Light Mode */
+body.light-mode .header {
+    background: rgba(248, 249, 250, 0.9);
+}
+
+body.light-mode .contact-link {
+    color: var(--light);
+}
+
+body.light-mode .language-btn {
+    color: var(--light);
+}
+
+body.light-mode .language-btn.active {
+    color: var(--secondary);
+}

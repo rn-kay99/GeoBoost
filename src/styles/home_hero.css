@@ -71,15 +71,35 @@
         display: none;
     }
 
+    /* Countdown */
+    .countdown {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .countdown-number {
+        font-size: 1.8rem;
+    }
+
+    .countdown-label {
+        font-size: 0.7rem;
+    }
+
     .countdown-item {
-        background: rgba(0, 0, 0, 0.5); /* dunkler und kontrastreicher */
-        border: 1px solid rgba(255, 255, 255, 0.1); /* optional zur Betonung */
-      }
+        background: rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        min-width: 70px;
+        padding: 10px;
+    }
 
     .countdown-item:nth-of-type(7) {
         display: none;
     }
-    
+
+    body.light-mode .countdown-item {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
 
     .notify-form {
         padding: 0 15px;

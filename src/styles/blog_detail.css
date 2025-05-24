@@ -239,7 +239,7 @@
 }
 
 .author-bio {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--light);
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -313,4 +313,13 @@
     .blog-content h2 {
         font-size: 1.5rem;
     }
+}
+
+
+body.light-mode .author-bio{
+    color: black;
+}
+
+body.light-mode .author-image {
+    border: 3px solid rgb(74 159 150);
 }

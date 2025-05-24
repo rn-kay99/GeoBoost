@@ -4,6 +4,22 @@
     --dark: #1a1a2e;
     --light: #f8f9fa;
     --accent: #ff6b6b;
+    --bg-gradient-start: rgba(15, 15, 35, 0.9);
+    --bg-gradient-end: rgba(26, 26, 60, 0.95);
+    --card-bg: rgba(20, 20, 45, 0.6);
+    --card-border: rgba(136, 211, 206, 0.2);
+}
+
+body.light-mode {
+    --primary: #6e45e2;
+    --secondary: #4a9f96;
+    --dark: #f8f9fa;
+    --light: #1a1a2e;
+    --accent: #ff6b6b;
+    --bg-gradient-start: rgba(240, 240, 245, 0.9);
+    --bg-gradient-end: rgba(220, 220, 230, 0.95);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --card-border: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -34,7 +50,8 @@ header {
 
 }
 
-.header-home, .header-contact {
+.header-home,
+.header-contact {
     position: absolute;
     top: 0;
     left: 0;
@@ -67,7 +84,8 @@ header {
     border-radius: 8px;
     transition: all 0.3s ease;
     display: inline-block;
-    min-height: 44px; /* Für mobile Tap-Ziele empfohlen */
+    min-height: 44px;
+    /* Für mobile Tap-Ziele empfohlen */
     background-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -90,13 +108,20 @@ header {
 
 .contact-link:hover::after,
 .contact-link:focus::after {
-    width: calc(100% - 24px); /* Gleicher Abstand wie Padding */
+    width: calc(100% - 24px);
+    /* Gleicher Abstand wie Padding */
 }
 
 .language-switcher {
     display: flex;
     align-items: center;
+    background: rgb(255 255 255 / 10%);;
     gap: 5px;
+    border-radius: 9px;
+}
+
+body.light-mode .language-switcher {
+    background: rgba(26, 26, 46, 0.1);
 }
 
 .language-btn {
@@ -127,6 +152,10 @@ header {
     font-size: 0.9rem;
 }
 
+body.light-mode .language-divider {
+    color: black;
+}
+
 .branding {
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
@@ -151,7 +180,7 @@ header {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding: 100px 0 0 0;
+    padding: 130px 0 0 0;
 }
 
 .hero-grid {
@@ -302,6 +331,14 @@ header {
     letter-spacing: 2px;
     position: relative;
     padding-left: 15px;
+}
+
+body.light-mode .tagline,
+body.light-mode .tagline-arrow {
+    background: linear-gradient(45deg, var(--light), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .tagline-arrow {
@@ -608,14 +645,11 @@ h1 {
     opacity: 0.8;
 }
 
-/* Neuronales Netzwerk-Hintergrundsystem */
 .features {
     padding: 80px 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(to bottom, 
-        rgba(15, 15, 35, 0.9), 
-        rgba(26, 26, 60, 0.95));
+    background: linear-gradient(to bottom, var(--bg-gradient-start), var(--bg-gradient-end));
 }
 
 
@@ -628,11 +662,11 @@ h1 {
 
 /* Feature Cards mit Glas-Effekt */
 .feature-card {
-    background: rgba(20, 20, 45, 0.6);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 30px;
-    border: 1px solid rgba(136, 211, 206, 0.2);
+    border: 1px solid var(--card-border);
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -647,11 +681,9 @@ h1 {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-        circle at center, 
-        rgba(110, 69, 226, 0.1) 0%, 
-        transparent 70%
-    );
+    background: radial-gradient(circle at center,
+            rgba(110, 69, 226, 0.1) 0%,
+            transparent 70%);
     z-index: -1;
     animation: rotateNeuron 20s linear infinite;
 }
@@ -676,10 +708,10 @@ h1 {
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, 
-        var(--primary), 
-        var(--secondary), 
-        var(--accent));
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--secondary),
+            var(--accent));
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
@@ -690,14 +722,29 @@ h1 {
 
 /* Animationen */
 @keyframes neuralPulse {
-    0% { opacity: 0.3; background-size: 80px 80px; }
-    50% { opacity: 0.6; }
-    100% { opacity: 0.4; background-size: 85px 85px; }
+    0% {
+        opacity: 0.3;
+        background-size: 80px 80px;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.4;
+        background-size: 85px 85px;
+    }
 }
 
 @keyframes rotateNeuron {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive Anpassungen */
@@ -705,7 +752,7 @@ h1 {
     .features::before {
         background-size: 60px 60px;
     }
-    
+
     .feature-card {
         padding: 20px;
     }
@@ -836,7 +883,7 @@ h1 {
     color: var(--light);
 }
 
-.blog-title-link{
+.blog-title-link {
     text-decoration: none;
 }
 
@@ -878,7 +925,7 @@ h1 {
 
 /* Responsive Anpassungen */
 @media (max-width: 1024px) {
-    
+
     .hero-grid {
         grid-template-columns: 1fr;
     }
@@ -899,7 +946,7 @@ h1 {
         line-height: 1.5;
     }
 
-    .container{
+    .container {
         padding: 0 15px;
     }
 
@@ -925,6 +972,9 @@ h1 {
         margin-top: 15px;
         width: 100%;
         justify-content: space-between;
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 
     .branding {
@@ -956,25 +1006,6 @@ h1 {
 
     .tagline-arrow {
         font-size: 1.2rem;
-    }
-
-    /* Countdown */
-    .countdown {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .countdown-item {
-        min-width: 70px;
-        padding: 10px;
-    }
-
-    .countdown-number {
-        font-size: 1.8rem;
-    }
-
-    .countdown-label {
-        font-size: 0.7rem;
     }
 
     /* Notify Form */
@@ -1049,7 +1080,7 @@ h1 {
         /* Apple empfiehlt mindestens 44px für tappbare Elemente */
     }
 
-    .blog-teaser{
+    .blog-teaser {
         padding: 10px;
     }
 
@@ -1116,10 +1147,12 @@ h1 {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.1);
         opacity: 0.8;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;

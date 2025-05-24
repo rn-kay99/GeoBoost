@@ -18,7 +18,7 @@
     background: url('../images/contact_mood.png') no-repeat center center;
     background-size: cover;
     /* je nach Stimmung anpassen */
-    filter: blur(3px) brightness(0.6);
+    filter: blur(0px) brightness(0.6);
     z-index: 0;
 }
 
@@ -214,4 +214,34 @@ textarea.form-input {
     .contact-form-container {
         padding: 25px;
     }
+}
+
+/* Light Mode Anpassungen für Contact Page */
+body.light-mode .contact-section {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+body.light-mode .form-input {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--light);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .contact-info-box {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .contact-form-container{
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .submit-btn {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    color: white;
+}
+
+body.light-mode .contact-info-text h4 {
+    color: var(--secondary);
 }

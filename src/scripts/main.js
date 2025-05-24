@@ -108,7 +108,6 @@ function setupForm() {
     }
 }
 
-
 // FAQ Accordion
 function setupFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
@@ -130,30 +129,42 @@ function setupFAQ() {
     });
 }
 
-// Blog
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const bg = document.getElementById('hero-bg');
-    if (bg) {
-        bg.style.transform = `scale(${1 + scrollY / 3000})`;
-        bg.style.transition = 'transform 0.1s ease-out';
-    }
-});
+// Parallax Background
+function setupParallax() {
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const bg = document.getElementById('hero-bg');
+        if (bg) {
+            bg.style.transform = `scale(${1 + scrollY / 3000})`;
+            bg.style.transition = 'transform 0.1s ease-out';
+        }
+    });
+}
 
-// Initialisierung
-document.addEventListener('DOMContentLoaded', async () => {
+
+
+// Initialize everything
+function init() {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
     setupScrollIndicator();
     setupForm();
     setupFAQ();
+    setupParallax();
+    setupThemeSwitcher();
 
+    // Lazy loading polyfill if needed
     if ('loading' in HTMLImageElement.prototype === false) {
         const script = document.createElement('script');
         script.src = 'https://polyfill.io/v3/polyfill.min.js?features=loadingLazy';
         document.head.appendChild(script);
     }
-});
+}
 
-
+// Start initialization when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}

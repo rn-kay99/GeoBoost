@@ -4,13 +4,21 @@
     background: linear-gradient(to bottom, var(--dark), rgba(26, 26, 46, 0.9));
 }
 
+body.light-mode .blog-archive {
+    background: linear-gradient(to bottom, var(--dark), rgba(240, 240, 245, 0.9));
+}
+
 .blog-header {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     margin-bottom: 50px;
     min-height: 300px;
     text-align: center;
+    color: var(--light);
+}
+
+body.light-mode .blog-header {
     color: var(--light);
 }
 
@@ -28,6 +36,10 @@
     object-fit: cover;
     filter: brightness(0.5) blur(2px);
     transform: scale(1.05);
+}
+
+body.light-mode .blog-header-bg img {
+    filter: brightness(0.7) blur(2px);
 }
 
 /* Fade oben und unten */
@@ -52,6 +64,14 @@
     background: linear-gradient(to top, rgba(26, 26, 46, 1), rgba(26, 26, 46, 0));
 }
 
+body.light-mode .blog-header::before {
+    background: linear-gradient(to bottom, rgba(240, 240, 245, 1), rgba(240, 240, 245, 0));
+}
+
+body.light-mode .blog-header::after {
+    background: linear-gradient(to top, rgba(240, 240, 245, 1), rgba(240, 240, 245, 0));
+}
+
 .blog-header-content {
     position: relative;
     z-index: 1;
@@ -70,9 +90,18 @@
     color: transparent;
 }
 
+body.light-mode .blog-title {
+    background: linear-gradient(45deg, var(--light), var(--secondary));
+    -webkit-background-clip: text
+}
+
 .blog-subtitle {
     font-size: 1.2rem;
     opacity: 0.85;
+}
+
+body.light-mode .blog-subtitle {
+    opacity: 0.9;
 }
 
 .blog-grid {
@@ -91,10 +120,21 @@
     transition: all 0.3s ease;
 }
 
+body.light-mode .blog-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
 .blog-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(110, 69, 226, 0.2);
     border-color: rgba(110, 69, 226, 0.3);
+}
+
+body.light-mode .blog-card:hover {
+    box-shadow: 0 15px 40px rgba(110, 69, 226, 0.3);
+    border-color: rgba(110, 69, 226, 0.5);
 }
 
 .blog-card-image {
@@ -125,6 +165,10 @@
     margin-bottom: 15px;
 }
 
+body.light-mode .blog-card-meta {
+    color: var(--secondary);
+}
+
 .blog-card-category {
     background: rgba(110, 69, 226, 0.2);
     padding: 3px 10px;
@@ -132,17 +176,33 @@
     font-size: 0.8rem;
 }
 
+body.light-mode .blog-card-category {
+    background: rgba(110, 69, 226, 0.15);
+    color: var(--primary);
+}
+
 .blog-card-title {
     font-family: 'Kanit', sans-serif;
     font-size: 1.5rem;
     margin-bottom: 15px;
     line-height: 1.3;
+    color: var(--light);
+}
+
+body.light-mode .blog-card-title {
+    color: var(--light);
 }
 
 .blog-card-excerpt {
     opacity: 0.8;
     margin-bottom: 20px;
     line-height: 1.6;
+    color: var(--light);
+}
+
+body.light-mode .blog-card-excerpt {
+    opacity: 0.9;
+    color: var(--light);
 }
 
 .blog-card-link {
@@ -158,9 +218,13 @@
     color: var(--primary);
 }
 
+.blog-card-title-link {
+    color: var(--light);
+    text-decoration: none;
+}
 
-.blog-card-link:hover::after {
-    transform: translateX(5px);
+body.light-mode .blog-card-title-link {
+    color: var(--light);
 }
 
 .blog-pagination {
@@ -184,9 +248,14 @@
     color: var(--secondary);
 }
 
-.blog-card-title-link {
+body.light-mode .blog-page-link {
     color: var(--light);
-    text-decoration: none;
+}
+
+body.light-mode .blog-page-link.active,
+body.light-mode .blog-page-link:hover {
+    background: rgba(110, 69, 226, 0.2);
+    color: var(--primary);
 }
 
 .blog-sort {
@@ -195,6 +264,10 @@
     margin-bottom: 20px;
     gap: 10px;
     align-items: center;
+    color: var(--light);
+}
+
+body.light-mode .blog-sort {
     color: var(--light);
 }
 
@@ -207,9 +280,14 @@
     font-size: 0.95rem;
 }
 
+body.light-mode .blog-sort select {
+    background: rgba(26, 26, 46, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: var(--light);
+}
+
 .blog-count {
     font-size: 1.1rem;
-    /* font-weight: 500; */
     color: var(--light);
     margin-bottom: 10px;
     display: flex;
@@ -217,6 +295,9 @@
     gap: 0.5rem;
 }
 
+body.light-mode .blog-count {
+    color: var(--light);
+}
 
 @media (max-width: 768px) {
     .blog-grid {
