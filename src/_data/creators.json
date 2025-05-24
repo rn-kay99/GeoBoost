@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "creator_id": "kay_steinbauer",
+        "first_name": "Kay",
+        "last_name": "Steinbauer",
+        "email": "kay.steinbauer@hu-berlin.de",
+        "born": "1999-08-13",
+        "short_description": "Machine Learning Engineer ⚡️",
+        "bio": {
+            "de": "Der Entwickler hinter GeoBoost mit Expertise in Machine Learning und Web Entwicklung.",
+            "en": "The developer behind GeoBoost with expertise in machine learning and web development."
+        },
+        "image": "/images/kay_profile.png"
+    }
+]

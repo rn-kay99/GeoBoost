@@ -36,6 +36,20 @@ pageType: blog_detail
     {% endif %}
     <div class="blog-content">
         <p>{{ post.content[lang] | safe}}</p>
-        <!-- Rich Content kann hier eingefügt werden -->
+    </div>
+    <!-- Author Section -->
+    <div class="author-card">
+        {% set author = creators | findCreator(post.creator_id) %}
+        <div class="author-image-container">
+            <img src="{{ author.image }}" alt="{{ author.first_name }} {{ author.last_name }}" class="author-image">
+                <div class="author-image-glow"></div>
+        </div>
+        <div class="author-info">
+            <h3 class="author-name">{{ author.first_name }}
+                {{ author.last_name }}</h3>
+            <p class="author-title">{{ author.short_description }}</p>
+            <p class="author-bio">{{ author.bio[lang] }}</p>
+            <a href="/{{lang}}/contact.html" class="author-contact">Kontakt aufnehmen</a>
+        </div>
     </div>
 </article>

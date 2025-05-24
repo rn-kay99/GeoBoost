@@ -33,6 +33,7 @@
     {
         "id": 2,
         "slug": "what-is-geo",
+        "creator_id": "kay_steinbauer",
         "title": {
             "de": "Was ist GEO? Der geheime Code für KI-Sichtbarkeit",
             "en": "What is GEO? The secret code for AI visibility"
