@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/*.ico");
   eleventyConfig.addPassthroughCopy({
     "src/_data/blog_posts.json": "_data/blog_posts.json",
+    "src/_data/translations/de.json": "_data/translations/de.json",
+    "src/_data/translations/en.json": "_data/translations/en.json",
     "src/_data/creators.json": "_data/creators.json"
   });
 
