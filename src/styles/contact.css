@@ -1,15 +1,9 @@
 /* Contact Page Specific Styles */
 .contact-section {
-    padding: 100px 0;
-    background: linear-gradient(to bottom, rgba(26, 26, 46, 0.05), rgba(110, 69, 226, 0.1));
-}
-
-.contact-section {
     position: relative;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 60px 0;
     background-color: var(--dark);
-    /* Fallback */
 }
 
 .contact-background {
@@ -17,7 +11,6 @@
     inset: 0;
     background: url('../images/contact_mood.png') no-repeat center center;
     background-size: cover;
-    /* je nach Stimmung anpassen */
     filter: blur(0px) brightness(0.6);
     z-index: 0;
 }
@@ -25,12 +18,9 @@
 .contact-container {
     position: relative;
     z-index: 1;
-}
-
-.contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -40,19 +30,22 @@
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    padding: 40px;
+    padding: 30px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    order: 2; /* Standard: rechts */
 }
 
 .contact-info-container {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    order: 1; /* Standard: links */
 }
 
 .section-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 15px;
     background: linear-gradient(45deg, var(--light), var(--secondary));
     -webkit-background-clip: text;
     background-clip: text;
@@ -60,13 +53,13 @@
 }
 
 .section-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     opacity: 0.8;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .form-label {
@@ -94,7 +87,7 @@
 }
 
 textarea.form-input {
-    min-height: 150px;
+    min-height: 120px;
     resize: vertical;
 }
 
@@ -102,12 +95,13 @@ textarea.form-input {
     background: linear-gradient(45deg, var(--primary), var(--accent));
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 12px 25px;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
+    width: 100%;
 }
 
 .submit-btn:hover {
@@ -119,34 +113,28 @@ textarea.form-input {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    padding: 30px;
+    padding: 25px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 30px;
     transition: all 0.3s ease;
-}
-
-.contact-info-box:hover {
-    transform: translateY(-5px);
-    border-color: rgba(110, 69, 226, 0.3);
 }
 
 .contact-info-title {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
     color: var(--secondary);
 }
 
 .contact-info-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .contact-info-icon {
-    margin-right: 15px;
+    margin-right: 12px;
     color: var(--primary);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 3px;
 }
 
@@ -154,69 +142,85 @@ textarea.form-input {
     flex: 1;
 }
 
-.contact-info-text a {
-    color: var(--light);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info-text a:hover {
-    color: var(--secondary);
-}
-
 .contact-info-text h4 {
     margin-bottom: 5px;
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .contact-info-text p {
     opacity: 0.8;
     line-height: 1.6;
-}
-
-.contact-info-icon i {
-    color: var(--light); 
+    font-size: 0.9rem;
 }
 
 .help-points {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .help-point {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .help-point-icon {
     color: var(--secondary);
     margin-right: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
-
-
-/* Responsive */
+/* Responsive Anpassungen */
 @media (max-width: 1024px) {
     .contact-container {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
-
+    
     .contact-form-container {
-        order: 1;
+        order: 1; /* Formular oben auf Mobilgeräten */
+    }
+    
+    .contact-info-container {
+        order: 2; /* Info-Boxen unten auf Mobilgeräten */
+        flex-direction: column;
     }
 }
 
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
+    .contact-section {
+        padding: 40px 0;
     }
-
-    .contact-form-container {
-        padding: 25px;
+    
+    .contact-container {
+        padding: 0 15px;
+        gap: 25px;
+    }
+    
+    .contact-form-container,
+    .contact-info-box {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .form-input {
+        padding: 10px 12px;
+    }
+    
+    .submit-btn {
+        padding: 12px 20px;
     }
 }
 
-/* Light Mode Anpassungen für Contact Page */
+/* Light Mode Anpassungen */
 body.light-mode .contact-section {
     background-color: var(--dark);
     color: var(--light);
@@ -228,20 +232,20 @@ body.light-mode .form-input {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode .contact-info-box {
-    background: rgba(255, 255, 255, 0.8);
+body.light-mode .contact-info-box,
+body.light-mode .contact-form-container {
+    background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode .contact-form-container{
-    background: rgba(255, 255, 255, 0.8);
+body.light-mode .contact-info-text p {
+    color: var(--light);
 }
 
-body.light-mode .submit-btn {
-    background: linear-gradient(45deg, var(--primary), var(--accent));
-    color: white;
+body.light-mode .contact-info-text a {
+    color: var(--primary);
 }
 
-body.light-mode .contact-info-text h4 {
+body.light-mode .contact-info-text a:hover {
     color: var(--secondary);
 }
