@@ -821,7 +821,8 @@ h1 {
     justify-content: center;
 }
 
-.blog-date {
+.blog-date,
+.blog-reading-time {
     color: var(--secondary);
     font-size: 0.9rem;
     margin-bottom: 10px;

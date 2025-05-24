@@ -22,11 +22,14 @@ pageType: blog_detail
                 <h1 class="blog-title">{{ post.title[lang] }}</h1>
                 <div class="blog-meta">
                     <span class="blog-date">{{ post.date[lang] }}</span>
-                    <span class="blog-reading-time">5 Min. Lesezeit</span>
+                    <span class="blog-reading-time">{{post.reading_time}} {{t.blog_reading_time}}</span>
                 </div>
             </div>
         </div>
     </header>
+    <div class="blog-content">
+        <p>{{ post.content[lang] | safe}}</p>
+    </div>
     {% if post.tags[lang] %}
         <div class="blog-tags">
             {% for tag in post.tags[lang] %}
@@ -34,9 +37,6 @@ pageType: blog_detail
             {% endfor %}
         </div>
     {% endif %}
-    <div class="blog-content">
-        <p>{{ post.content[lang] | safe}}</p>
-    </div>
     <!-- Author Section -->
     <div class="author-card">
         {% set author = creators | findCreator(post.creator_id) %}
@@ -45,11 +45,13 @@ pageType: blog_detail
                 <div class="author-image-glow"></div>
         </div>
         <div class="author-info">
-            <h3 class="author-name">{{ author.first_name }}
-                {{ author.last_name }}</h3>
+            <h3 class="author-name">
+                {{ author.first_name }} {{ author.last_name }}
+                <span class="author-badge">Author</span>
+            </h3>
             <p class="author-title">{{ author.short_description }}</p>
             <p class="author-bio">{{ author.bio[lang] }}</p>
-            <a href="/{{lang}}/contact.html" class="author-contact">Kontakt aufnehmen</a>
+            <a href="/{{lang}}/contact.html" class="author-contact">{{ t.contact }}</a>
         </div>
     </div>
 </article>

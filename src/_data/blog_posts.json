@@ -4,8 +4,8 @@
         "slug": "beta-tech-preview",
         "creator_id": "kay_steinbauer",
         "title": {
-            "de": "GeoBoost Beta: Erste Einblicke in unsere Technologie",
-            "en": "GeoBoost Beta: First Look at Our Technology"
+            "de": "GeoBoost Beta: Erste Einblicke in unsere neues Tool",
+            "en": "GeoBoost Beta: First insights into our new tool"
         },
         "excerpt": {
             "de": "Entdecken Sie, wie unsere revolutionäre Geodaten-Analyse Unternehmen transformieren wird.",
@@ -16,18 +16,19 @@
             "en": "22. May 2025",
             "date_iso": "2025-05-22"
         },
+        "reading_time": "3 Min.", 
         "image": "images/blog_beta_image.png",
         "category": {
             "de": "UPDATE",
             "en": "UPDATE"
         },
         "content": {
-            "de": "<h2>Die Kerninnovationen</h2><p>GeoBoost basiert auf drei revolutionären Säulen...</p>...",
-            "en": "<h2>Core Innovations</h2><p>GeoBoost is based on three revolutionary pillars...</p>..."
+            "de": "Bei GEOBoost dreht sich alles um das <b>Dashboard</b>. Dort siehst du auf einen Blick, wie gut du in KI-Suchen wie ChatGPT oder Perplexity gefunden wirst und was du tun kannst, um das zu verbessern.",
+            "en": "GEOBoost is all about the <b>Dashboard</b>. There you can see at a glance how well you are being found in AI searches such as ChatGPT or Perplexity and what you can do to improve this."
         },
         "tags": {
-          "de": ["Beta", "Technologie", "Geodaten", "Innovation"],
-          "en": ["Beta", "Technology", "Geodata", "Innovation"]
+          "de": ["Beta", "Technologie", "GeoBoost", "Innovation"],
+          "en": ["Beta", "Technology", "GeoBoost", "Innovation"]
         }
     },
     {
@@ -47,14 +48,15 @@
             "en": "25. May 2025",
             "date_iso": "2025-05-25"
         },
+        "reading_time": "2 Min.", 
         "image": "images/why_geo_mood.png",
         "category": {
             "de": "TECHNOLOGIE",
             "en": "TECHNOLOGY"
         },
         "content": {
-            "de": "Stell dir vor, du hast ein Café und plötzlich kommen 90% weniger Besucher. <h2>Die Kerninnovationen</h2><p>GeoBoost basiert auf drei revolutionären Säulen...</p>...",
-            "en": "<h2>Core Innovations</h2><p>GeoBoost is based on three revolutionary pillars...</p>..."
+            "de": "<p>Stell dir vor, du hast ein Café und plötzlich kommen 90% weniger Besucher. Dieses Szenario ist längst Realität für viele Unternehmen im Netz. Der Rückgang hat nichts mit deinem Café zu tun, sondern mit der Straße, auf der niemand mehr unterwegs ist. Das kann in einer neuen KI-Welt Realität werden. Was früher eine Google-Suche war, ist heute ein Gespräch mit ChatGPT oder Perplexity.</p><h2>Nutzung der Websuche</h2><p>Laut einer Analyse von Ahrefs sinkt die Klickrate (CTR) für Webseiten bei Suchanfragen mit KI-Übersichten um etwa 34,5% <a href='https://ahrefs.com/blog/ai-overviews-reduce-clicks/' target='_blank' class='blog-link' rel='noopener noreferrer'>[1]</a>. Zur gleichen Zeit verzeichnete ChatGPT im Mai 2025 durchschnittlich 170 Millionen tägliche Besucher <a href='https://www.digitalinformationworld.com/2025/05/chatgpt-stats-in-numbers-growth-usage-and-global-impact.html' target='_blank' class='blog-link' rel='noopener noreferrer'>[2]</a>. <h2>Fazit</h2><p>Also, GEO ist nicht optional. Wer in Zukunft nicht in KI-Antworten auftaucht, ist unsichtbar.</p>",
+            "en": "<p>Imagine you have a café and suddenly there are 90% fewer visitors. This scenario has been a reality for many companies online. The decline has nothing to do with your café, but with the road where no one is traveling anymore. This can become a reality in a new AI world. What used to be a Google search is now a conversation with ChatGPT or Perplexity.</p><h2>Use of the web search</h2><p>According to an analysis by Ahrefs, the click-through rate (CTR) for websites for search queries with AI overviews drops by around 34.5% <a href='https://ahrefs.com/blog/ai-overviews-reduce-clicks/' target='_blank' class='blog-link' rel='noopener noreferrer'>[1]</a>. At the same time, ChatGPT recorded an average of 170 million daily visitors in May 2025 <a href='https://www.digitalinformationworld.com/2025/05/chatgpt-stats-in-numbers-growth-usage-and-global-impact.html' target='_blank' class='blog-link' rel='noopener noreferrer'>[2]</a>. <h2>Conclusion</h2><p>So, GEO is not optional. Anyone who does not appear in AI responses in the future is invisible.</p>"
         },
         "tags": {
           "de": ["GEO", "SuchmaschinenOptimierung", "LLMs", "Marketing"],
