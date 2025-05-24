@@ -217,6 +217,7 @@ body.light-mode .theme-btn {
 /* Anpassung für den Header im Light Mode */
 body.light-mode .header {
     background: rgba(248, 249, 250, 0.9);
+    /* padding-bottom: 0; */
 }
 
 body.light-mode .contact-link {
@@ -229,4 +230,10 @@ body.light-mode .language-btn {
 
 body.light-mode .language-btn.active {
     color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    body.light-mode .header {
+        padding-bottom: 0;
+    }
 }

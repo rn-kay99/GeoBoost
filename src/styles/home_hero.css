@@ -6,6 +6,10 @@
         min-height: auto;
     }
 
+    body.light-mode .hero{
+        padding-top: 30px;
+    }
+
     .hero-content {
         text-align: center;
         margin-bottom: 20px;
