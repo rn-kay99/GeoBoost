@@ -237,6 +237,9 @@ body.light-mode .blog-card {
     line-height: 1.4;
     transition: color 0.3s ease;
     color: var(--light);
+}
+
+.blog-card-title-link{
     text-decoration: none;
 }
 

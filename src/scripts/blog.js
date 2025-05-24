@@ -165,9 +165,8 @@ function setupEventListeners() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener('DOMContentLoaded', async () => {
     setupEventListeners();
-    loadTranslations();
-    loadPosts();
+    await loadTranslations();
+    await loadPosts();
 });
